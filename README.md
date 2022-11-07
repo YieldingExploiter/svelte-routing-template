@@ -8,7 +8,7 @@ This variant of the template includes [svelte-routing](https://www.npmjs.com/pac
 
 ## Base Route
 
-If, in your development environment, you want the same route as your github pages site, simply run `node setup-routing.js /<your repo name>/`
+If your repository's name doesn't match the name of the template, run `node setup-routing.js /<your repo name>/` to ensure Github Pages builds for the correct route.
 
 > You can also use `node setup-routing.js /` (where `/` is whatever your route is, with leading and trailing `/` if applicable) to set a custom route for things like a custom github pages domain, etc...
 > Additionally, doing `node setup-routing.js auto` will update `BaseRoute.ts` (used during runtime) to match `.root-path` (used during build)
