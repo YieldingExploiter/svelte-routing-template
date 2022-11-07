@@ -1,9 +1,11 @@
 <script lang="ts">
   // imported routes
   import index from './routes/index.svelte';
+  import other from './routes/other.svelte';
 
   // route list
   const Routes: Record<string, any> = {
+    other: other,
     '/': index, // index should be last!
   };
 
