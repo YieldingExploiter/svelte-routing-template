@@ -26,8 +26,8 @@ jobs:
         uses: actions/configure-pages@v1
       - name: NPM Install
         run: npm i
-      - name: Write repo name to file
-        run: echo ${{ github.event.repository.name }} > .github-repo-name
+      - name: Write route (repo name) to file
+        run: echo /${{ github.event.repository.name }} > .root-path
       - name: NPM Build
         run: npm run build
       - name: Copy to 404 page
