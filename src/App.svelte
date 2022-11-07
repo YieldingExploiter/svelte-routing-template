@@ -3,9 +3,12 @@
   import index from './routes/index.svelte';
   import other from './routes/other.svelte';
 
-  // route list
+  // get base route
+  import { baseRoute } from './BaseRoute';
+
+  // route list - include leading /
   const Routes: Record<string, any> = {
-    other: other,
+    '/other': other,
     '/': index, // index should be last!
   };
 
@@ -20,7 +23,8 @@
   </nav>
   <div>
     {#each Object.entries(Routes) as [path, Page]}
-      <Route {path}><Page /></Route>
+      <Route path={`${baseRoute}${path}`}><Page /></Route>
+      <Route path={`${path}`}><Page /></Route>
     {/each}
   </div>
 </Router>

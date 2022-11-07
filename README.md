@@ -2,10 +2,16 @@
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
 
-This variant of the template includes [svelte-routing](https://www.npmjs.com/package/svelte-routing) & [Github Pages](.github/workflows/pages.yml) support.
+This variant of the template includes [svelte-routing](https://www.npmjs.com/package/svelte-routing)\* & [Github Pages](.github/workflows/pages.yml) support.
 
-## Pages: Root Route
-If you want a root route that isn't `/<your repo name>` (ie you use a custom domain/are using this for your `<username>.github.io` repo), create a file named `.root-path` with your root path in it (this should include the leading `/` & trailing `/`), or tweak the [`vite.config.ts`](/vite.config.ts)
+\* This project uses a modified link component to accomadate for the BaseRoute (see the next 2 sections).
+
+## Base Route
+
+If, in your development environment, you want the same route as your github pages site, simply run `node setup-routing.js /<your repo name>/`
+
+> You can also use `node setup-routing.js /` (where `/` is whatever your route is, with leading and trailing `/` if applicable) to set a custom route for things like a custom github pages domain, etc...
+> Additionally, doing `node setup-routing.js auto` will update `BaseRoute.ts` (used during runtime) to match `.root-path` (used during build)
 
 ## Recommended IDE Setup
 

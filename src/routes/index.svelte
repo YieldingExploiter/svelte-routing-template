@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Link } from 'svelte-routing';
+  import Link from '../lib/Link.svelte';
 </script>
 
 <p>

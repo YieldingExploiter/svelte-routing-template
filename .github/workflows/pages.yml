@@ -27,7 +27,7 @@ jobs:
       - name: NPM Install
         run: npm i
       - name: Write route (repo name) to file
-        run: echo /${{ github.event.repository.name }}/ > .root-path
+        run: if [ ! -e .root-path ]; then echo /${{ github.event.repository.name }}/ > .root-path; fi
       - name: NPM Build
         run: npm run build
       - name: Copy to 404 page
